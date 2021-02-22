@@ -1,0 +1,6 @@
+Strings
+- collection of letter, words, paragraph, article
+- strings are represented by '...', "...", '''...''', """..."""
+- strings are immutable
+- default memory of strings is 49 bytes, and then per character it increases the memory by 1 byte
+ eg : text = "hello" => 49 + 5 = 54 bytes
