@@ -12,6 +12,7 @@ products = [
     ]
 
 to_search = input("Enter your search : ")
+to_search = to_search.lower()
 '''
 1. User can enter either product name or brand or category
 2. Store search results in a list
@@ -19,6 +20,45 @@ to_search = input("Enter your search : ")
   a. low to high
   b. high to low
 '''
+
+results = []
+
+for i in range(len(products)):
+    condition_1 = to_search in products[i]['p_name'].lower()
+    condition_2 = to_search in products[i]['brand'].lower()
+    condition_3 = to_search in products[i]['Category'].lower()
+    if condition_1 or condition_2 or condition_3:
+        print("Name :",products[i]['p_name'])
+        print("Brand :",products[i]['brand'])
+        print("Price :",products[i]['price'])
+        print("*" * 50)
+        results.append(products[i])
+
+to_filter = input("Filter Products : Yes | No ? ")
+
+def return_price(x):
+    return x['price']
+
+if to_filter.lower() == 'yes':
+    print("""
+    1. High to Low
+    2. Low to High
+""")
+
+    ch = input("Enter your choice : ")
+    if ch == "1":
+        sorted(results, key=return_price, reverse=True)
+    else:
+        sorted(results, key=return_price)
+
+    for i in range(len(results)):
+        print("Name :",results[i]['p_name'])
+        print("Brand :",results[i]['brand'])
+        print("Price :",results[i]['price'])
+        print("*" * 50)
+
+
+
 
 
 
