@@ -31,10 +31,10 @@ print(scores)
 3. Now show only those movies which user has not seen yet
 '''
 
+category = max(scores, key=scores.get)
+print("User has watched {} movies max".format(category))
 
-
-
-
-
-
+rec_category = dataset[category]
+rec_movies = set(rec_category) - user
+print("Recommended movies are",rec_movies)
 
