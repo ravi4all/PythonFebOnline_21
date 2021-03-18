@@ -21,19 +21,10 @@ Press 3 for Div
 Press 4 for Mul
 """)
 
-ch = input("Enter your choice : ")
+ch = int(input("Enter your choice : "))
 
 num_1 = int(input("Enter first number : "))
 num_2 = int(input("Enter second number : "))
 
-# 1. Using If Else
-if ch == "1":
-    add(num_1, num_2)
-elif ch == "2":
-    sub(num_1, num_2)
-elif ch == "3":
-    div(num_1, num_2)
-elif ch == "4":
-    mul(num_1, num_2)
-else:
-    print("Invalid Choice")
+operations = [add, sub, div, mul]
+operations[ch - 1](num_1, num_2)
