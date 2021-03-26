@@ -1,0 +1,37 @@
+File Handling
+
+Types of files :
+- text
+- binary
+
+Operations performed on a file :
+- read
+- write
+
+Steps to perform file handling :
+1. open
+2. read/write
+3. close
+
+Modes for file handling
+- text
+	- r - read text
+	- w - write text
+	- a - append text
+	- x - write text
+- binary
+	- rb - read binary
+	- wb - write binary
+	- ab - append binary
+	- xb - write binary
+
+- read + write => r+, w+
+
+pdf	- pypdf
+excel	- openpyxl / pandas
+word	- docx
+
+
+
+
+

@@ -1,0 +1,11 @@
+# file = open('file_2.txt', 'r+')
+# data = file.read()
+# file.write('\nHello world')
+# print(data)
+# file.close()
+
+file = open('file_2.txt', 'w+')
+file.write('\nHello world')
+data = file.read()
+print(data)
+file.close()
